@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AloeAmla - Organic Integrated Farming & Direct Trading</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="AloeAmla connects customers, retailers, and farmers directly for raw Aloe Vera & Amla trading, alongside premium organic personal care and food products grown through integrated farming.">
+  <meta name="keywords"
+    content="Aloe Vera, Amla, Integrated Farming, Organic Soap, Hair Oil, Murabba, Raw Aloe Vera, Raw Amla, Haridwar Organic">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating Glow Orbs for Ambient Green Aesthetic -->
+  <div class="glow-orb-container">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#home" class="logo" id="logo-link">
+        <img class="logo-icon" src="assets/logo.jpeg" alt="AloeAmla Logo">
+        <span class="logo-text">Aloe<span class="highlight">Amla</span></span>
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="#services" class="nav-link" id="nav-services">Products</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-sm btn-primary" id="cart-button-home" onclick="openCartModal()">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Cart <span class="cart-count">0</span>
+        </button>
+        <button class="btn btn-sm btn-outline theme-toggle-btn" id="theme-toggle-btn" onclick="toggleTheme()">
+          <i class="fa-solid fa-moon"></i>
+          Dark
+        </button>
+        <a href="#services" class="btn btn-sm btn-outline">Explore Products</a>
+        <a href="https://wa.me/916398009851" target="_blank" class="whatsapp-nav-btn" aria-label="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Containers (Views) -->
+  <main class="main-content">
+
+    <!-- ================= HOME VIEW ================= -->
+    <section id="home" class="view-section active">
+      <!-- Hero Banner with Blurred Background Option -->
+      <div class="hero-section"
+        style="background-image: linear-gradient(rgba(27, 67, 50, 0.75), rgba(27, 67, 50, 0.9)), url('assets/hero.jpeg');">
+        <div class="container hero-container">
+          <div class="hero-text-wrapper animate-fade-in">
+            <span class="badge">100% Organic Integrated Farming</span>
+            <h1 class="hero-title">Harmonizing Aloe Vera & Amla for Pure Wellness</h1>
+            <p class="hero-quote">"Nurtured by nature, cultivated with integrity. We grow Aloe Vera and Amla
+              side-by-side in balanced ecosystems to deliver pure, direct-from-farm health and beauty products."</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="openTradingModal('buy')">Buy Raw Materials</button>
+              <button class="btn btn-secondary" onclick="openTradingModal('sell')">Sell Your Harvest</button>
+            </div>
+          </div>
+
+          <!-- Glassmorphic Stats Quick Card -->
+          <div class="hero-stats-card glass animate-slide-up">
+            <div class="stat-item">
+              <i class="fa-solid fa-seedling"></i>
+              <h3>Integrated</h3>
+              <p style="font-weight: bold;">Sustainable Farming</p>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+              <i class="fa-solid fa-handshake"></i>
+              <h3>Direct Trade</h3>
+              <p style="font-weight: bold;">No Middlemen</p>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+              <i class="fa-solid fa-award"></i>
+              <h3>100% Pure</h3>
+              <p style="font-weight: bold;">Zero Additives</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Raw Trade Dashboard Section -->
+      <div class="section-divider"></div>
+      <section class="trade-intro container">
+        <div class="section-header text-center">
+          <h2>Direct Buy & Sell Marketplace</h2>
+          <p class="section-subtitle">We bridge the gap between farmers, retail consumers, and wholesale merchants.</p>
+        </div>
+        <div class="grid grid-2">
+          <!-- Buy Card -->
+          <div class="action-card glass animate-hover">
+            <div class="action-card-image">
+              <img src="assets/order1.jpeg" alt="Looking to Purchase">
+            </div>
+            <div class="action-card-body">
+              <div class="card-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+              <h3>Looking to Purchase?</h3>
+              <p>Order bulk fresh Aloe Vera leaves or raw green Amla harvested within 24 hours. Ideal for manufacturing,
+                retail, or home extraction.</p>
+              <button class="btn btn-primary" onclick="openTradingModal('buy')">Order Raw Materials</button>
+            </div>
+          </div>
+          <!-- Sell Card -->
+          <div class="action-card glass animate-hover">
+            <div class="action-card-image">
+              <img src="assets/sell1.jpeg" alt="Want to Sell Your Harvest">
+            </div>
+            <div class="action-card-body">
+              <div class="card-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+              <h3>Want to Sell Your Harvest?</h3>
+              <p>Are you an organic grower? Sell your raw Aloe Vera stalks or mature Amla fruits directly to us at highly
+                competitive market rates.</p>
+              <button class="btn btn-secondary" onclick="openTradingModal('sell')">Submit Sell Offer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Made Products Section (Links to Services Page) -->
+      <section class="featured-products bg-soft-green">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="badge">Our Curated Range</span>
+              <h2>Handcrafted Organic Products</h2>
+            </div>
+            <a href="#services" class="explore-all-link">View All Products <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div class="products-grid">
+            <!-- 1. Aloe Vera Soap -->
+            <div class="product-card glass animate-hover" onclick="showProductDetails('soap')">
+              <div class="product-card-image">
+                <img src="assets/soap.jpeg" alt="Gentle Aloe Vera Soap">
+                <div class="product-badge">Aloe Vera</div>
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-name">Gentle Aloe Vera Soap</h3>
+                <p class="product-desc">Enriched with natural cold-pressed aloe pulp, virgin coconut oil, and soothing
+                  botanicals.</p>
+                <div class="product-footer">
+                  <span class="product-price">Rs. 120</span>
+                  <span class="view-details">Details <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Aloe Vera Gel -->
+            <div class="product-card glass animate-hover" onclick="showProductDetails('gel')">
+              <div class="product-card-image">
+                <img src="assets/gel.jpeg" alt="99% Pure Hydrating Gel">
+                <div class="product-badge">Aloe Vera</div>
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-name">99% Pure Hydrating Gel</h3>
+                <p class="product-desc">Multipurpose cooling gel extracted from fresh inner leaf filaments. Absorbs
+                  instantly.</p>
+                <div class="product-footer">
+                  <span class="product-price">Rs. 180</span>
+                  <span class="view-details">Details <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Amla Hair Oil -->
+            <div class="product-card glass animate-hover" onclick="showProductDetails('hair-oil')">
+              <div class="product-card-image">
+                <img src="assets/oil.jpeg" alt="Revitalizing Amla Hair Oil">
+                <div class="product-badge">Amla</div>
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-name">Revitalizing Amla Hair Oil</h3>
+                <p class="product-desc">Traditional cold-pressed sesame oil infused with fresh amla juice for deep root
+                  nourishment.</p>
+                <div class="product-footer">
+                  <span class="product-price">Rs. 250</span>
+                  <span class="view-details">Details <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Amla Murabba -->
+            <div class="product-card glass animate-hover" onclick="showProductDetails('murabba')">
+              <div class="product-card-image">
+                <img src="assets/murabba.jpeg" alt="Sweet Organic Amla Murabba">
+                <div class="product-badge">Amla</div>
+              </div>
+              <div class="product-card-body">
+                <h3 class="product-name">Sweet Organic Amla Murabba</h3>
+                <p class="product-desc">Traditional sweet preserve made with raw cane sugar, rich in Vitamin C and
+                  antioxidants.</p>
+                <div class="product-footer">
+                  <span class="product-price">Rs. 320</span>
+                  <span class="view-details">Details <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Farmer Guidance Partnership Section -->
+      <section class="farmer-guidance container">
+        <div class="farmer-banner glass border-mint">
+          <img class="farmer-banner-bg" src="assets/Start Integrated Farming under Our Expert Guidance.jpeg" alt="Integrated Farming Background">
+          <div class="farmer-content">
+            <span class="badge badge-accent">Grow With Us</span>
+            <h2 style="font-weight: bold;">Start Integrated Farming under Our Expert Guidance</h2>
+            <p>Unlock the potential of your agricultural land. We provide end-to-end guidance on cultivating Aloe Vera
+              and Amla together, including organic seeds, saplings, drip irrigation mapping, compost training, and a
+              100% buyback guarantee.</p>
+            <div class="farmer-benefits">
+              <div class="benefit-item"><i class="fa-solid fa-circle-check"></i> Dual income from same land plot</div>
+              <div class="benefit-item"><i class="fa-solid fa-circle-check"></i> Sustainable water conservation tips
+              </div>
+              <div class="benefit-item"><i class="fa-solid fa-circle-check"></i> Direct buyback agreements</div>
+            </div>
+            <button class="btn btn-primary" onclick="scrollToFarmerForm()">Apply for Partnership</button>
+          </div>
+          <div class="farmer-visual">
+            <i class="fa-solid fa-tractor tractor-large"></i>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= ABOUT VIEW ================= -->
+    <section id="about" class="view-section">
+      <div class="container text-layout">
+        <div class="section-header text-center">
+          <span class="badge">Our Story</span>
+          <h1>About AloeAmla</h1>
+          <p class="section-subtitle">A simple, transparent approach to holistic wellness and organic agriculture.</p>
+        </div>
+
+        <div class="about-grid grid grid-2">
+          <div class="about-text glass">
+            <h2>Our Farming Philosophy</h2>
+            <p>At AloeAmla, we believe in working with nature, not against it. We use a method called <strong>Integrated
+                Farming</strong>. Instead of planting only one crop on a piece of land, we grow Aloe Vera and Amla
+              together on the same farm.</p>
+            <p>Amla trees grow tall and provide a gentle shade, which keeps the soil cool and preserves water. Aloe Vera
+              plants grow happily underneath them, needing very little water and helping to prevent weeds from
+              spreading. This natural partnership creates a rich, chemical-free ecosystem that helps both crops flourish
+              without synthetic fertilizers or pesticides.</p>
+          </div>
+
+          <div class="about-text glass border-green">
+            <h2>Connecting Directly with You</h2>
+            <p>Traditional farming usually involves many middle agents who take a share of the profit, leaving the
+              farmers with very little and raising prices for the customers. AloeAmla changes this.</p>
+            <p>By using our website, you connect directly with us. Whether you are a retail customer buying fresh gel, a
+              farmer looking to grow under our guidance, or a retailer sourcing raw materials in bulk, we manage
+              everything from our fields straight to your door step. This ensures fresh quality, reasonable prices, and
+              fair pay for our growers.</p>
+          </div>
+        </div>
+
+        <!-- Integrated Farming Breakdown (Simple Language) -->
+        <div class="farm-steps bg-soft-green glass">
+          <h2 class="text-center">How Our Integrated Farming Works</h2>
+          <div class="steps-grid">
+            <div class="step-box">
+              <div class="step-num">01</div>
+              <h3>Tall Amla Trees</h3>
+              <p>Amla trees are planted in wide rows. They grow tall, catching sunlight and acting as natural windbreaks
+                while providing soft shade.</p>
+            </div>
+            <div class="step-box">
+              <div class="step-num">02</div>
+              <h3>Understory Aloe Vera</h3>
+              <p>Aloe Vera is planted in the spaces between rows. Because of the shade, the soil stays moist longer,
+                saving water by up to 40%.</p>
+            </div>
+            <div class="step-box">
+              <div class="step-num">03</div>
+              <h3>Organic Synergy</h3>
+              <p>We use cow manure, bio-compost, and natural neem sprays. Both crops feed each other, making the soil
+                healthy and products highly potent.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES VIEW ================= -->
+    <section id="services" class="view-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Trading & Products</span>
+          <h1>Our Services & Products</h1>
+          <p class="section-subtitle">From raw organic harvests to processed health & skin care formulations.</p>
+        </div>
+
+        <!-- Category 1: Raw Material Trading -->
+        <div class="service-category">
+          <h2 class="category-title"><i class="fa-solid fa-seedling"></i> Direct Raw Material Trading</h2>
+          <p class="category-subtitle">Buy and sell fresh, organic harvests directly with no middlemen.</p>
+
+          <div class="raw-trading-grid">
+            <div class="raw-card glass">
+              <h3>Organic Raw Aloe Vera</h3>
+              <p>Harvested at dawn, these thick leaves are rich in active aloin and polysaccharides. Perfect for
+                cosmetic formulation, pharmaceutical labs, or raw juice extraction.</p>
+              <div class="raw-footer">
+                <span>Min. Order: 50 kg</span>
+                <button class="btn btn-sm btn-primary" onclick="openTradingModal('buy', 'Aloe Vera')">Order Raw
+                  Aloe</button>
+              </div>
+            </div>
+            <div class="raw-card glass">
+              <h3>Fresh Raw green Amla</h3>
+              <p>Juicy, sour, and packed with vitamin C. Handpicked from our orchard trees. Ideal for candy
+                manufacturers, powder production, or dietary supplements.</p>
+              <div class="raw-footer">
+                <span>Min. Order: 25 kg</span>
+                <button class="btn btn-sm btn-primary" onclick="openTradingModal('buy', 'Amla')">Order Raw Amla</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Manufactured Products -->
+        <div class="service-category">
+          <h2 class="category-title"><i class="fa-solid fa-pump-medical"></i> Handcrafted Wellness Products</h2>
+          <p class="category-subtitle">Made in small batches using pure farm extracts. Click on any item to view
+            details, prices, and direct ordering options.</p>
+
+          <div class="products-list-grid">
+
+            <!-- 1. Aloe Vera Soap -->
+            <div class="product-item glass animate-hover" onclick="showProductDetails('soap')">
+              <img class="product-item-img" src="assets/soap.jpeg" alt="Gentle Aloe Vera Soap">
+              <div class="product-item-body">
+                <div class="product-info">
+                  <h3> Aloevera Soap</h3>
+                  <p>Pure, moisturizing, chemical-free bath bar.</p>
+                  <span class="badge badge-tag">100% Aloevera</span>
+                </div>
+                <div class="product-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+              </div>
+            </div>
+
+            <!-- 2. Aloe Vera Facewash -->
+            <div class="product-item glass animate-hover" onclick="showProductDetails('facewash')">
+              <img class="product-item-img" src="assets/facewash.jpeg" alt="Aloe Vera Nourishing Facewash">
+              <div class="product-item-body">
+                <div class="product-info">
+                  <h3> Facewash</h3>
+                  <p>Gentle face wash for clean, hydrated, and glowing skin.</p>
+                  <span class="badge badge-tag">100% Aloevera</span>
+                </div>
+                <div class="product-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+              </div>
+            </div>
+
+            <!-- 3. Aloe Vera Gel -->
+            <div class="product-item glass animate-hover" onclick="showProductDetails('gel')">
+              <img class="product-item-img" src="assets/gel.jpeg" alt="99% Pure Hydrating Aloe Gel">
+              <div class="product-item-body">
+                <div class="product-info">
+                  <h3>Aloevera Gel</h3>
+                  <p>Instant cooling relief for skin burns, rashes, and hair conditioning.</p>
+                  <span class="badge badge-tag">100% Aloevera</span>
+                </div>
+                <div class="product-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+              </div>
+            </div>
+
+            <!-- 4. Aloe Vera Cream -->
+            <div class="product-item glass animate-hover" onclick="showProductDetails('cream')">
+              <img class="product-item-img" src="assets/productscream.jpeg" alt="Deep Hydration Aloe Cream">
+              <div class="product-item-body">
+                <div class="product-info">
+                  <h3>Aloe Cream</h3>
+                  <p>Rich night moisturizer infused with vitamin E and aloe nectar.</p>
+                  <span class="badge badge-tag">100% Aloevera</span>
+                </div>
+                <div class="product-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+              </div>
+            </div>
+
+            <!-- 5. Amla Powder -->
+            <div class="product-item glass animate-hover" onclick="showProductDetails('powder')">
+              <img class="product-item-img" src="assets/productspowder.jpeg" alt="Sun-Dried Amla Powder">
+              <div class="product-item-body">
+                <div class="product-info">
+                  <h3> Amla Powder</h3>
+                  <p>Organic, nutrient-dense amla powder for digestion and immunity.</p>
+                  <span class="badge badge-tag">Sun dried Amla</span>
+                </div>
+                <div class="product-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+              </div>
+            </div>
+
+            <!-- 6. Amla Hair Oil -->
+            <div class="product-item glass animate-hover" onclick="showProductDetails('hair-oil')">
+              <img class="product-item-img" src="assets/oil.jpeg" alt="Revitalizing Amla Hair Oil">
+              <div class="product-item-body">
+                <div class="product-info">
+                  <h3> Amla Hair Oil</h3>
+                  <p>Deep conditioning oil for glossy, thick, and healthy hair.</p>
+                  <span class="badge badge-tag">100% Amla</span>
+                </div>
+                <div class="product-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+              </div>
+            </div>
+
+            <!-- 7. Amla Murabba -->
+            <div class="product-item glass animate-hover" onclick="showProductDetails('murabba')">
+              <img class="product-item-img" src="assets/murabba.jpeg" alt="Sweet Organic Amla Murabba">
+              <div class="product-item-body">
+                <div class="product-info">
+                  <h3> Amla Murabba</h3>
+                  <p>Traditionally preserved delicious amla halves, excellent for gut health.</p>
+                  <span class="badge badge-tag">Organic Amla</span>
+                </div>
+                <div class="product-arrow"><i class="fa-solid fa-arrow-right-long"></i></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category 3: Farmer Partnership Enrollment form -->
+        <div class="service-category" id="farmer-partnership-section">
+          <div class="farmer-partnership-form glass border-mint">
+            <h2 class="text-center">Farming Guidance Partnership Program</h2>
+            <p class="text-center category-subtitle">Submit your details, and our agricultural experts will visit your
+              land for a free soil & layout assessment.</p>
+
+            <form id="farmer-partnership-form-element" class="custom-form grid grid-2">
+              <div class="form-group">
+                <label for="farmer-name">Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" id="farmer-name" required placeholder="Enter your full name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="farmer-phone">Contact Number <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" id="farmer-phone" required placeholder="Enter 10-digit mobile number">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="farmer-land">Land Area Available (Acres) <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-mountain"></i>
+                  <input type="number" id="farmer-land" required min="0.5" step="0.1" placeholder="e.g. 2.5">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="farmer-location">District & State <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <input type="text" id="farmer-location" required placeholder="e.g. Haridwar, Uttarakhand">
+                </div>
+              </div>
+              <div class="form-group col-span-2">
+                <label for="farmer-address">Complete Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-house"></i>
+                  <textarea id="farmer-address" required rows="3"
+                    placeholder="Enter complete village/town address"></textarea>
+                </div>
+              </div>
+              <div class="form-group col-span-2 text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Partnership Request</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CONTACT US VIEW ================= -->
+    <section id="contact" class="view-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Get in Touch</span>
+          <h1>Contact AloeAmla</h1>
+          <p class="section-subtitle">We would love to hear from you. Reach out for sales, purchases, or farming
+            guidance.</p>
+        </div>
+
+        <div class="contact-grid grid grid-2">
+          <!-- Contact Details Card -->
+          <div class="contact-info-card glass">
+            <h2>Our Contact Information</h2>
+            <p class="info-intro">Feel free to call us, send an email, or visit our farms directly in Haridwar.</p>
+
+            <ul class="info-list">
+              <li>
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-text">
+                  <h3>Email Address</h3>
+                  <p><a href="mailto:aloeamla@gmail.com">aloeamla@gmail.com</a></p>
+                  <p class="sub-info">Web: <a href="https://aloeamla.com" target="_blank">aloeamla.com</a></p>
+                </div>
+              </li>
+              <li>
+                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="info-text">
+                  <h3>Phone Numbers</h3>
+                  <p><a href="tel:+917895432010">+91 63980 09851</a> (Query Manager)</p>
+                  <p><a href="tel:+919412088741">+91 97587 15775</a> (General Manager)</p>
+                </div>
+              </li>
+              <li>
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-text">
+                  <h3>Headquarters & Farms</h3>
+                  <p>AloeAmla Organic Farms</p>
+                  <p>1-Bahadarpur Saini, Haridwar, Uttarakhand</p>
+                  <p>2-Kota-Muradnagar, Haridwar, Uttarakhand</p>
+                  <p> India - 249402</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-farming-badge glass">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Visiting Hours:</strong>
+                <p>Mon - Sat: 9:00 AM to 5:00 PM (IST). Sunday closed.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="contact-form-card glass border-green">
+            <h2>Send Us a Message</h2>
+            <p>Fill out the form below, and we will reply to your query within 24 hours.</p>
+
+            <form id="general-contact-form" class="custom-form">
+              <div class="form-group">
+                <label for="contact-name">Your Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" id="contact-name" required placeholder="Enter your full name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" id="contact-email" placeholder="name@example.com (optional)">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Contact Number <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" id="contact-phone" required placeholder="Enter 10-digit number">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message / Inquiry <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-comment-dots"></i>
+                  <textarea id="contact-message" required rows="4" placeholder="How can we help you?"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-about">
+        <span class="logo-text">Aloe<span class="highlight">Amla</span></span>
+        <p>Sustainable integrated farming producing premium organic harvests and wellness products. Sourced directly,
+          delivered purely.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Navigation</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Products & Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-legal">
+        <p>&copy; 2026 AloeAmla. All Rights Reserved.</p>
+        <p>Grown with ❤️ in Haridwar, Uttarakhand.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & OVERLAYS ================= -->
+
+  <!-- 1. Raw Materials Buy / Sell Modal -->
+  <div class="modal-overlay" id="trading-modal">
+    <div class="modal-container glass">
+      <button class="modal-close" onclick="closeModal('trading-modal')">&times;</button>
+
+      <div class="modal-header">
+        <h2 id="trading-modal-title">Buy Raw Materials</h2>
+        <p>Connect directly with our farm logistics team.</p>
+      </div>
+
+      <form id="trading-form" class="custom-form">
+        <!-- Hidden Action field: buy or sell -->
+        <input type="hidden" id="trade-action" value="buy">
+
+        <div class="form-group">
+          <label for="trade-name">Full Name <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="trade-name" required placeholder="Enter your full name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="trade-contact">Contact Number <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="trade-contact" required placeholder="Enter your phone number">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="trade-email">Email Address <span class="optional">(Optional)</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="trade-email" placeholder="yourname@gmail.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="trade-address">Address <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-house"></i>
+            <textarea id="trade-address" required rows="2" placeholder="Full shipping / pickup address"></textarea>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="form-group">
+            <label for="trade-product">Product <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-seedling"></i>
+              <select id="trade-product" required>
+                <option value="" disabled selected>Select Item</option>
+                <option value="Aloe Vera">Raw Aloe Vera</option>
+                <option value="Amla">Raw Amla</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="trade-qty">Quantity (kg) <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-weight-hanging"></i>
+              <input type="number" id="trade-qty" required min="1" placeholder="Quantity in kilograms">
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="trade-submit-btn">Submit Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Product Detail Modal -->
+  <div class="modal-overlay" id="product-detail-modal">
+    <div class="modal-container glass product-modal-content">
+      <button class="modal-close" onclick="closeModal('product-detail-modal')">&times;</button>
+
+      <div class="product-modal-grid">
+        <div class="product-modal-visual">
+          <div class="product-modal-icon-wrapper" id="p-modal-icon-wrapper">
+            <i class="fa-solid fa-soap" id="p-modal-icon"></i>
+          </div>
+          <div class="product-modal-tag" id="p-modal-tag">Aloe Vera</div>
+        </div>
+
+        <div class="product-modal-info">
+          <h2 id="p-modal-name">Gentle Aloe Vera Soap</h2>
+          <div class="p-modal-price-container">
+            Price: <span class="price-val" id="p-modal-price">Rs. 120</span>
+          </div>
+
+          <div class="p-modal-tabs">
+            <div class="tab-content active" id="p-modal-desc-tab">
+              <h3>Product Information</h3>
+              <p id="p-modal-description">Loaded with cooling Aloe Vera extracts. This chemical-free bath soap gently
+                purifies, keeping skin moisturized, soft, and irritation-free.</p>
+
+              <h3 class="mt-4">Benefits</h3>
+              <ul class="benefit-list" id="p-modal-benefits">
+                <li>Deeply hydrates dry skin layers</li>
+                <li>Reduces redness and sun irritation</li>
+                <li>100% natural, handcrafted base</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="product-modal-actions">
+            <button class="btn btn-secondary" id="p-modal-sell-btn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <a href="tel:+917895432010" class="btn btn-primary" id="p-modal-call-btn"><i class="fa-solid fa-phone"></i>
+              Call to Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal-overlay" id="cart-modal">
+    <div class="modal-container glass cart-modal-content">
+      <button class="modal-close" onclick="closeModal('cart-modal')">&times;</button>
+      <div class="modal-header">
+        <h2>Your Cart</h2>
+        <p>Items added from the product details view will appear here.</p>
+      </div>
+      <div id="cart-items-list" class="cart-items-list">
+        <p class="empty-cart-text">Your cart is currently empty.</p>
+      </div>
+      <div class="cart-footer">
+        <span id="cart-total-count">Items: 0</span>
+        <button class="btn btn-primary" onclick="checkoutCart()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Success Toast Notification -->
+  <div class="toast" id="toast-notification">
+    <div class="toast-content">
+      <i class="fa-solid fa-circle-check toast-icon"></i>
+      <div class="toast-message">
+        <h4 id="toast-title">Submission Successful</h4>
+        <p id="toast-desc">Our team will get back to you shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="app.js"></script>
+</body>
+
+</html>

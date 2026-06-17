@@ -1,0 +1,35 @@
+[
+  {
+    "orderUnit": "Retail Partner Unit A",
+    "orderId": "ORD-1001",
+    "items": [
+      { "product": "Gentle Aloe Vera Soap", "quantity": 24 },
+      { "product": "99% Pure Hydrating Aloe Gel", "quantity": 12 }
+    ],
+    "totalKg": 36,
+    "status": "Processing",
+    "placedAt": "2026-06-03T10:45:00+05:30"
+  },
+  {
+    "orderUnit": "Wholesale Grocery Unit B",
+    "orderId": "ORD-1002",
+    "items": [
+      { "product": "Revitalizing Amla Hair Oil", "quantity": 18 },
+      { "product": "Sweet Organic Amla Murabba", "quantity": 9 }
+    ],
+    "totalKg": 27,
+    "status": "Confirmed",
+    "placedAt": "2026-06-04T14:20:00+05:30"
+  },
+  {
+    "orderUnit": "Export Distribution Unit C",
+    "orderId": "ORD-1003",
+    "items": [
+      { "product": "Deep Hydration Aloe Cream", "quantity": 15 },
+      { "product": "Sun-Dried Amla Powder", "quantity": 20 }
+    ],
+    "totalKg": 35,
+    "status": "Dispatched",
+    "placedAt": "2026-06-05T09:12:00+05:30"
+  }
+]
